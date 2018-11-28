@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+		<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>	
+</head>
+
+<style type="text/css">
+	.nav1 > .active{
+		background-color: #006699;
+	
+	}
+	.nav1 .active > a{
+		color: white;
+	}
+	.nav1 > li > a{
+		color: grey;
+	}
+	
+	.nav1 > li:hover a{
+		color: white;
+		background-color: grey;
+	}
+	.list-group-item{
+		max-height: 100px;
+		overflow-y: auto;
+
+	}
+	.list-group{
+		max-height: 300px;
+		overflow-y: auto;
+	}
+
+	/* Month header */
+	.month {
+	    padding: 0px;
+	    margin: 0;
+	    width: 100%;
+	    background: #006699;
+	    color: white;
+	    text-align: center;
+	    position: relative;
+	}
+
+	/* Month list */
+	.month ul {
+	    margin: 0;
+	    padding: 0;
+	}
+
+	.month h3,.month h4{
+		margin: 0;
+		padding: 2px;
+	}
+
+	/* Previous button inside month header */
+	.month .prev {
+		position: absolute;
+	  top: 30%;
+	 cursor: pointer;
+	    left: 20px;
+	    
+	}
+
+	/* Next button */
+	.month .next {
+		position: absolute;
+	  top: 30%;
+	 cursor: pointer;
+	    right: 20px;
+	}
+
+	/* Weekdays (Mon-Sun) */
+	.weeks {
+	    margin: 0;
+	    padding: 10px 0;
+	    background-color:#006699;
+	}
+
+	.weeks li {
+	    display: inline-block;
+	    width: 13%;
+	    color: white;
+	    text-align: center;
+	    padding: 0;
+	    margin: 0;
+	}
+
+	/* Days (1-31) */
+	.days {
+	   
+	    margin: 0;
+	    padding: 10px 0;
+	    background-color:#006699;
+	}
+
+	.days li {
+	    
+	   display: inline-block;
+	    width: 14.2%;
+	    color: white;
+	    text-align: center;
+	    padding: 0;
+	    margin: 0;
+	}
+
+	.month .next:hover,.month .prev:hover{
+	  background-color: rgba(0,0,0,.2);
+	}
+	.weeks li:hover{
+		background-color: rgba(0,0,0,.2);
+	}
+	.days li:hover{
+		background-color: rgba(0,0,0,.3);
+	}
+
+
+</style>
+<body>
+	<!-- Social media row -->
+	<div class="container-fluid" style="background-color: #505050; ">
+				<div class="container">
+				
+					<ul class="list-inline pull-right" style="margin: 0;">
+						<li><a href="https://plus.google.com/communities/118068556925597419957"><img class="img-responsive" src="images/google.png">	</a></li>
+						<li><a href=""><img class="img-responsive" src="images/twitter.png">	</a></li>
+						<li><a href=""><img class="img-responsive" src="images/facebook.png">	</a></li>
+						<li><a href=""><img class="img-responsive" src="images/youtube.png">	</a></li>
+					</ul>
+				</div>
+	</div>
+	<div class="container">
+			<!-- logo and department name -->
+			<div class="row" >
+				<div class="col-lg-2">
+					<img class="pull-right img-thumbnail img-responsive" src="images/logo.png" style="border:none; ">
+				</div>
+				<div class="col-lg-10">
+					<br><br>
+					<h1 class="text-left text1" style="color: #006699;font-weight: bold;font-family: 'Oswald', sans-serif;">Department of Electronics and <br>Communication</h1>
+					<style type="text/css">
+						h1{
+							padding-top: -10px !important;
+						}
+					</style>
+
+					</style>
+				</div>
+			</div>
+
+		    <div class="container-fluid " style="background:#f1f1f1 ; padding-left: 0px;">
+		    	
+		    	
+			<!-- navigation bar -->
+		   		<div class=" navbar-static">
+	 				<div class="navbar-header">
+						<button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+			                <span class="icon-bar"></span>
+			                <span class="icon-bar"></span>
+			                <span class="icon-bar"></span>
+		            	</button>
+		            </div>
+
+		           	<div id="navbarCollapse" class="collapse navbar-collapse" style="padding:0;">
+			            <ul class="nav navbar-nav nav1">
+			                <li><a href="home.html">Home</a></li>
+			                <li ><a href="students.html">Students</a></li>
+							<li class="active"><a href="people.html">People</a></li> 
+			                <li><a href="academics.html">Academics</a></li> 
+			                <li><a href="#">News</a></li> 
+			                <li><a href="#">Alumni</a></li> 
+		                </ul>
+					 </div>
+
+		  		</div>
+		  	</div>	
+
+
+
+	
+
+	
+	
+
+
+
+	<div class="container ">
+		<div class="row" style="padding-right: 255px;">
+			<!-- <div class="col-lg-3" style="height: 300px; background-color: #f2f2f2; padding-right: 100px;"></div> -->
+				<ul class="nav nav-tabs nav-stacked col-lg-3 pills1 " style="padding-right: 50px;background-color: #f2f2f2; height: 300px; padding-top: 10px; padding-bottom: 520px;" >
+					
+	                    <li class="active " style=" color: #555; margin-right: -51px;"><a href="#a" data-toggle="tab" class="aq">&emsp;&emsp;<span class="glyphicon glyphicon-user " style="padding-right: 8px;"></span>HOD</a></li>
+	                    <li style=" margin-right: -51px;"><a href="#b" data-toggle="tab" class="aq"> &emsp;&emsp;Faculty</a></li>
+	                  <!--   <li style="margin-right: -51px;"><a href="#c" data-toggle="tab" class="aq">&emsp;&emsp;Associations</a></li>
+	                    <li style="margin-right: -51px;"><a href="#d" data-toggle="tab" class="aq">&emsp;&emsp;Achievemnts</a></li> -->
+	                
+	                    	    <style type="text/css">
+	                    	    .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus ,{
+				    color: #555;
+				    /*margin-right: -15px;*/
+
+				    cursor: default;
+				    background-color: #f2f2f2;
+				    /*border: 1px solid #252121c7;*/
+				    /*border-bottom-color: transparent;*/
+				    float: none;
+				    /*font-weight: bold*/
+				    /*height:40px;*/
+				    border-radius: 0px;
+
+				}
+
+				.nav-tabs{
+					border: 0px;
+					border-radius: 0px;
+
+				}
+				.nav-tabs > li >a{
+					color: #555;
+					border: 0px;
+					border-radius: 0px;
+				}
+				.nav-tabs > li.active >a:hover{
+					background-color: #f2f2f2;
+					border: 0px;
+					border-radius: 0px;
+				}
+				.nav-tabs > li.active> a:focus {
+					background-color: #f2f2f2;
+					border:none;
+				border: 0px;
+			border-radius: 0px;}
+				
+				
+				.nav-tabs> li.active> a{
+					color: #fff;
+					background-color: #2d6699;
+					/*border:none;*/
+					border: 0px;
+					border-radius: 0px;
+				}
+				.tabs>li{
+					font-size: 50px;
+					border: 0px;
+					border-radius: 0px;
+
+				}
+				.nav-tabs > li > a:hover{
+					/*color:#2d6699;*/
+				    background-color: #f2f2f2;
+				    border: 0px;
+				    border-radius: 0px;
+				}
+				.nav-tabs > li.active > a:focus{
+					/*color:#2d6699;*/
+					color: #fff;
+				    background-color: #2d6699;
+				    border: 0px;
+				    border-radius: 0px;
+				}
+				.aq::after{
+					content: '';
+				    display: block;
+					width: 0;
+					height: 2px;
+					background:#2d6699;
+					transition: width .3s;
+				}
+
+				.aq:hover::after{
+					width: 90%;
+					transition: width .3s;
+				}
+
+
+				
+                .drop{
+                	padding-top: 100px;
+                	padding-right: 50px;
+                }  
+				#b{
+					padding-bottom: 100px;
+					width: 115%;
+				}
+				.custom1{
+					padding-bottom: 4px;
+				   border-width: 0 0 3px;
+				    border-style: solid;
+				    border-color: #006699;
+				    width: 130%;	
+				    	}
+				    	.custom2{
+				    		margin-top: 10px;
+				    		
+					padding-bottom: 12px;
+				   border-width: 0 0 3px;
+				    border-style: solid;
+				    border-color: #006699;
+				    width: 50%;
+				    position: relative;
+				    width: 90%;
+				    margin-left: 180px;	
+				    	}
+				    	.bor{
+				    		border-left: 2px solid blue;
+				    		margin-left: 5px;
+				    		max-height: 150%;
+
+
+				    	}
+
+				.custom{
+
+				   border-width: 0 0 3px;
+				    border-style: solid;
+				    border-color: #006699;
+
+				    
+				    /*text-decoration: underline;*/
+
+				}
+	             	
+	                             </style>   
+
+	                </ul>
+
+
+
+
+			<div class="col-lg-9">
+				<div class="tab-content">
+					<!-- <div class="tab-pane active" id="b"></div> -->
+					<div class="tab-pane active" id="a">
+				
+					<img src="images/vinuthomas.jpg" alt="sir1" class="img-circle center-block img-fluid circle1  " style=" padding-left: 00px; margin-left: 320px;">
+					<p class="text-center" style="font-weight: bold; font-family: 'Oswald', sans-serif; padding-left: 120px; font-size: 30px; margin-top:-10px;"> Dr. Vinu Thomas</p>
+					<p class="custom1"></p>
+					<p style="font-family: 'Oswald', sans-serif; font-size: 20px; padding-top: 20px; padding-left: 200px;">Head of Department of Electronics Engineering 
+									Professor</p>
+									<br><br>
+									<p class ="q" style="font-family: 'Oswald', sans-serif;font-size: 17px; padding-left:20px;" ;><span class="glyphicon glyphicon-earphone" ></span>&ensp;0484-2575370</p><p class="q1"style="font-family: 'Oswald', sans-serif;font-size: 17px";><span class="glyphicon glyphicon-envelope"></span>&ensp;vt@mec.ac.in</p>
+									<br><br>
+									<a class="text-center" style =" padding-left:300px;font-family: 'Oswald', sans-serif;font-size: 17px;" href="https://sites.google.com/a/mec.ac.in/dr-vinu-thomas/"> Personal home page</a>
+								
+
+										
+										
+									</p><br><br><br><br><br>
+									<style type="text/css">
+										.q{
+											float: left;
+
+										}
+										.q1{
+											float: right;
+											padding-left: 10px;
+										}
+									</style>
+							</div>
+							<div class="tab-pane " id="b">
+
+
+								<img src="images/joby.jpg" alt="si1" align="left" class="img-circle ali circle2  " style=" padding-left: 00px; margin-left: 50px; float: left;">
+								<h3 class="custom2"  style=" padding-top: 50px; padding-left: 15px;">Dr.Jobymol Jacob &ensp;&ensp;<b class="bor"style="font-size: 19px;">&ensp;Professor</b></b></h3>
+
+								<h5 style="padding-top: 10px; font-size: 14px;">&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-earphone" ></span>&ensp;9947902562&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<a href="#">Personal Homepage</a>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-envelope"></span>&ensp;jobymol@gmail.com</h5>
+								<br>
+								<img src="images/laila.jpg" alt="si1" align="left" class="img-circle ali circle2  " style=" padding-left: 00px; margin-left: 50px; float: left;">
+								<h3 class="custom2"  style=" padding-top: 50px; padding-left: 15px;">Dr.Laila D&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<b class="bor"style="font-size: 19px;">&ensp;Professor</b></b></h3>
+								<h5 style="padding-top: 10px; font-size: 14px;">&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-earphone" ></span>&ensp;9847734728&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<a href="#">Personal Homepage</a>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-envelope"></span>&ensp;laila@mec.ac.in</h5>
+								<br>
+								<img src="images/rajeshmohan.jpg" alt="si1" align="left" class="img-circle ali circle2  " style=" padding-left: 00px; margin-left: 50px; float: left;">
+								<h3 class="custom2"  style=" padding-top: 50px; padding-left: 15px;">Dr.Rajesh Mohan R&ensp;&ensp;<b class="bor"style="font-size: 19px;">&ensp;Associate Professor</b></b></h3>
+								<h5 style="padding-top: 10px; font-size: 14px;">&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-earphone" ></span>&ensp;9846138648&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<a href="#">Personal Homepage</a>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-envelope"></span>&ensp; rajesh@mec.ac.in</h5>
+								<br>
+								<img src="images/sunithck.jpg" alt="si1" align="left" class="img-circle ali circle2  " style=" padding-left: 00px; margin-left: 50px; float: left;">
+								<h3 class="custom2"  style=" padding-top: 50px; padding-left: 15px;">Sunith C.K &ensp;&ensp;<b class="bor"style="font-size: 19px;">&ensp;Associate Professor</b></b></h3>
+								<h5 style="padding-top: 10px; font-size: 14px;">&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-earphone" ></span>&ensp;9446218123&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<a href="#">Personal Homepage</a>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-envelope"></span>&ensp;sunith.cheriyil@gmail.com </h5>
+									<br>
+								<img src="images/Sajeesh.jpg" alt="si1" align="left" class="img-circle ali circle2  " style=" padding-left: 00px; margin-left: 50px; float: left;">
+								<h3 class="custom2"  style=" padding-top: 50px; padding-left: 15px;">Sajeesh M&ensp;&ensp;<b class="bor"style="font-size: 19px;">&ensp;Associate Professor</b></b></h3>
+								<h5 style="padding-top: 10px; font-size: 14px;">&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-earphone" ></span>&ensp;9947902562&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<a href="#">Personal Homepage</a>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-envelope"></span>&ensp;jobymol@gmail.com</h5>
+
+								<br>
+								<img src="images/swapna.jpg" alt="si1" align="left" class="img-circle ali circle2  " style=" padding-left: 00px; margin-left: 50px; float: left;">
+								<h3 class="custom2"  style=" padding-top: 50px; padding-left: 15px;">Swapna P.P &ensp;&ensp;<b class="bor"style="font-size: 19px;">&ensp;Associate Professor</b></b></h3>
+								<h5 style="padding-top: 10px; font-size: 14px;">&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-earphone" ></span>&ensp;9446469642&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<a href="#">Personal Homepage</a>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-envelope"></span>&ensp;swapna@mec.ac.in</h5>
+								<br>
+								<img src="images/rashidme.jpg" alt="si1" align="left" class="img-circle ali circle2  " style=" padding-left: 00px; margin-left: 50px; float: left;">
+								<h3 class="custom2"  style=" padding-top: 50px; padding-left: 15px;">Rashid M E &ensp;&ensp;<b class="bor"style="font-size: 19px;">&ensp;Associate Professor</b></b></h3>
+								<h5 style="padding-top: 10px; font-size: 14px;">&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-earphone" ></span>&ensp;9447300096&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<a href="#">Personal Homepage</a>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-envelope"></span>&ensp;rashid@mec.ac.in</h5>
+									<br>
+								<img src="images/ashok.jpg" alt="si1" align="left" class="img-circle ali circle2  " style=" padding-left: 00px; margin-left: 50px; float: left;">
+								<h3 class="custom2"  style=" padding-top: 50px; padding-left: 15px;">Dr. Ashok kumar.T &ensp;&ensp;<b class="bor"style="font-size: 19px;">&ensp;Associate Professor</b></b></h3>
+								<h5 style="padding-top: 10px; font-size: 14px;">&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-earphone" ></span>&ensp;9447300096&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<a href="#">Personal Homepage</a>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-envelope"></span>&ensp;rashid@mec.ac.in</h5>
+										<br>
+								<img src="images/binesh.jpg" alt="si1" align="left" class="img-circle ali circle2  " style=" padding-left: 00px; margin-left: 50px; float: left;">
+								<h3 class="custom2"  style=" padding-top: 50px; padding-left: 15px;">Dr. Binesh T &ensp;&ensp;<b class="bor"style="font-size: 19px;">&ensp;Associate Professor</b></b></h3>
+								<h5 style="padding-top: 10px; font-size: 14px;">&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-earphone" ></span>&ensp;9447300096&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<a href="#">Personal Homepage</a>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-envelope"></span>&ensp;rashid@mec.ac.in</h5>
+									<br>
+								<img src="images/sheebaps.jpg" alt="si1" align="left" class="img-circle ali circle2  " style=" padding-left: 00px; margin-left: 50px; float: left;">
+								<h3 class="custom2"  style=" padding-top: 50px; padding-left: 15px;">Sheeba P S &ensp;&ensp;<b class="bor"style="font-size: 19px;">&ensp;Associate Professor</b></b></h3>
+								<h5 style="padding-top: 10px; font-size: 14px;">&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-earphone" ></span>&ensp;9447300096&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<a href="#">Personal Homepage</a>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-envelope"></span>&ensp;rashid@mec.ac.in</h5>
+									<br>
+								<img src="images/rashida.jpg" alt="si1" align="left" class="img-circle ali circle2  " style=" padding-left: 00px; margin-left: 50px; float: left;">
+								<h3 class="custom2"  style=" padding-top: 50px; padding-left: 15px;">Rashida K &ensp;&ensp;<b class="bor"style="font-size: 19px;">&ensp;Associate Professor</b></b></h3>
+								<h5 style="padding-top: 10px; font-size: 14px;">&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-earphone" ></span>&ensp;9447300096&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<a href="#">Personal Homepage</a>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-envelope"></span>&ensp;rashid@mec.ac.in</h5>
+									<br>
+								<img src="images/anu.jpg" alt="si1" align="left" class="img-circle ali circle2  " style=" padding-left: 00px; margin-left: 50px; float: left;">
+								<h3 class="custom2"  style=" padding-top: 50px; padding-left: 15px;">Anu Thangam George &ensp;&ensp;<b class="bor"style="font-size: 19px;">&ensp;Associate Professor</b></b></h3>
+								<h5 style="padding-top: 10px; font-size: 14px;">&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-earphone" ></span>&ensp;9447300096&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<a href="#">Personal Homepage</a>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-envelope"></span>&ensp;rashid@mec.ac.in</h5>
+
+								<br>
+								<img src="images/thushara.jpg" alt="si1" align="left" class="img-circle ali circle2  " style=" padding-left: 00px; margin-left: 50px; float: left;">
+								<h3 class="custom2"  style=" padding-top: 50px; padding-left: 15px;">Thushara H P &ensp;&ensp;<b class="bor"style="font-size: 19px;">&ensp;Associate Professor</b></b></h3>
+								<h5 style="padding-top: 10px; font-size: 14px;">&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-earphone" ></span>&ensp; 9447746938&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<a href="#">Personal Homepage</a>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-envelope"></span>&ensp;thushara@mec.ac.in</h5>
+								<br>
+								<img src="images/arun c r.jpg" alt="si1" align="left" class="img-circle ali circle2  " style=" padding-left: 00px; margin-left: 50px; float: left;">
+								<h3 class="custom2"  style=" padding-top: 50px; padding-left: 15px;">Arun C.R &ensp;&ensp;<b class="bor"style="font-size: 19px;">&ensp;Associate Professor</b></b></h3>
+								<h5 style="padding-top: 10px; font-size: 14px;">&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-earphone" ></span>&ensp; 9446490296&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<a href="#">Personal Homepage</a>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-envelope"></span>&ensp; arun_cr@mec.ac.in</h5>
+								<br>
+								<img src="images/irshad.jpg" alt="si1" align="left" class="img-circle ali circle2  " style=" padding-left: 00px; margin-left: 50px; float: left;">
+								<h3 class="custom2"  style=" padding-top: 50px; padding-left: 15px;">Irshad Ali&ensp;&ensp;<b class="bor"style="font-size: 19px;">&ensp;Associate Professor</b></b></h3>
+								<h5 style="padding-top: 10px; font-size: 14px;">&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-earphone" ></span>&ensp; 9847121267&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<a href="#">Personal Homepage</a>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-envelope"></span>&ensp;irshad@mec.ac.in</h5>
+								<br>
+								<!-- <img src="images/arun c r.jpg" alt="si1" align="left" class="img-circle ali circle2  " style=" padding-left: 00px; margin-left: 50px; float: left;">
+								<h3 class="custom2"  style=" padding-top: 50px; padding-left: 15px;">Arun C.R &ensp;&ensp;<b class="bor"style="font-size: 19px;">&ensp;Associate Professor</b></b></h3>
+								<h5 style="padding-top: 10px; font-size: 14px;">&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-earphone" ></span>&ensp;9947902562&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<a href="#">Personal Homepage</a>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-envelope"></span>&ensp;jobymol@gmail.com</h5> -->
+								<!-- <br> -->
+								<img src="images/jaisy.jpg" alt="si1" align="left" class="img-circle ali circle2  " style=" padding-left: 00px; margin-left: 50px; float: left;">
+								<h3 class="custom2"  style=" padding-top: 50px; padding-left: 15px;">Jaisy M A&ensp;&ensp;<b class="bor"style="font-size: 19px;">&ensp;Associate Professor</b></b></h3>
+								<h5 style="padding-top: 10px; font-size: 14px;">&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-earphone" ></span>&ensp;9495209745&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<a href="#">Personal Homepage</a>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-envelope"></span>&ensp; jaisy@mec.ac.in</h5>
+								<br>
+								<img src="images/mahesh.jpg" alt="si1" align="left" class="img-circle ali circle2  " style=" padding-left: 00px; margin-left: 50px; float: left;">
+								<h3 class="custom2"  style=" padding-top: 50px; padding-left: 15px;">Mahesh B S&ensp;&ensp;<b class="bor"style="font-size: 19px;">&ensp;Associate Professor</b></b></h3>
+								<h5 style="padding-top: 10px; font-size: 14px;">&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-earphone" ></span>&ensp;9020609062&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<a href="#">Personal Homepage</a>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-envelope"></span>&ensp;maheshbsmec@gmail.com</h5>
+								<br>
+								<img src="images/ganeshnath.jpg" alt="si1" align="left" class="img-circle ali circle2  " style=" padding-left: 00px; margin-left: 50px; float: left;">
+								<h3 class="custom2"  style=" padding-top: 50px; padding-left: 15px;">Ganeshnath R&ensp;&ensp;<b class="bor"style="font-size: 19px;">&ensp;Associate Professor</b></b></h3>
+								<h5 style="padding-top: 10px; font-size: 14px;">&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-earphone" ></span>&ensp;9481801910&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<a href="#">Personal Homepage</a>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-envelope"></span>&ensp;rganeshnath4@gmail.com</h5>
+								<br>
+								<img src="images/vasanth.jpg" alt="si1" align="left" class="img-circle ali circle2  " style=" padding-left: 00px; margin-left: 50px; float: left;">
+								<h3 class="custom2"  style=" padding-top: 50px; padding-left: 15px;">Vasanth Kumar Sen&ensp;<b class="bor"style="font-size: 19px;">&ensp;Associate Professor</b></b></h3>
+								<h5 style="padding-top: 10px; font-size: 14px;">&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-earphone" ></span>&ensp;9961648992&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<a href="#">Personal Homepage</a>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-envelope"></span>&ensp;vasanthkumar101112@gmail.com</h5>
+								<br>
+								<img src="images/arun.jpg" alt="si1" align="left" class="img-circle ali circle2  " style=" padding-left: 00px; margin-left: 50px; float: left;">
+								<h3 class="custom2"  style=" padding-top: 50px; padding-left: 15px;">Arun A V&ensp;<b class="bor"style="font-size: 19px;">&ensp;Associate Professor</b></b></h3>
+								<h5 style="padding-top: 10px; font-size: 14px;">&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-earphone" ></span>&ensp;9544640794&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<a href="#">Personal Homepage</a>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-envelope"></span>&ensp;arunav.aav@gmail.com</h5>
+								<br>
+								<!-- <img src="images/surya.jpg" alt="si1" align="left" class="img-circle ali circle2  " style=" padding-left: 00px; margin-left: 50px; float: left;">
+								<h3 class="custom2"  style=" padding-top: 50px; padding-left: 15px;">Surya Rajan&ensp;<b class="bor"style="font-size: 19px;">&ensp;Associate Professor</b></b></h3>
+								<h5 style="padding-top: 10px; font-size: 14px;">&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-earphone" ></span>&ensp;9544640794&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<a href="#">Personal Homepage</a>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-envelope"></span>&ensp;arunav.aav@gmail.com</h5>
+									<br> -->
+								<img src="images/ajay.jpg" alt="si1" align="left" class="img-circle ali circle2  " style=" padding-left: 00px; margin-left: 50px; float: left;">
+								<h3 class="custom2"  style=" padding-top: 50px; padding-left: 15px;">Ajay Nath S A&ensp;<b class="bor"style="font-size: 19px;">&ensp;Associate Professor</b></b></h3>
+								<h5 style="padding-top: 10px; font-size: 14px;">&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-earphone" ></span>&ensp;9447990618&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<a href="#">Personal Homepage</a>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-envelope"></span>&ensp;mec.ajaynath555@gmail.com</h5>
+									<br>
+								<img src="images/Vishnu Pradeep K.jpg" alt="si1" align="left" class="img-circle ali circle2  " style=" padding-left: 00px; margin-left: 50px; float: left;">
+								<h3 class="custom2"  style=" padding-top: 50px; padding-left: 15px;">Vishnu Pradeep K&ensp;<b class="bor"style="font-size: 19px;">&ensp;Associate Professor</b></b></h3>
+								<h5 style="padding-top: 10px; font-size: 14px;">&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-earphone" ></span>&ensp;9567218473&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<a href="#">Personal Homepage</a>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-envelope"></span>&ensp;vishnupradeepk.26jan@gmail.com</h5>
+
+										<br>
+								<img src="images/Angel Mary Ignatious.jpg" alt="si1" align="left" class="img-circle ali circle2  " style=" padding-left: 00px; margin-left: 50px; float: left;">
+								<h3 class="custom2"  style=" padding-top: 50px; padding-left: 15px;">Angel Mary Ignatious&ensp;<b class="bor"style="font-size: 19px;">&ensp;Associate Professor</b></b></h3>
+								<h5 style="padding-top: 10px; font-size: 14px;">&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-earphone" ></span>&ensp;9746184070&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<a href="#">Personal Homepage</a>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-envelope"></span>&ensp;angelmaryignatious95@gmail.com</h5>
+										<br>
+								<img src="images/Deepthy Sivan.jpg" alt="si1" align="left" class="img-circle ali circle2  " style=" padding-left: 00px; margin-left: 50px; float: left;">
+								<h3 class="custom2"  style=" padding-top: 50px; padding-left: 15px;">Deepthy Sivan&ensp;<b class="bor"style="font-size: 19px;">&ensp;Associate Professor</b></b></h3>
+								<h5 style="padding-top: 10px; font-size: 14px;">&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-earphone" ></span>&ensp;9496091392&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<a href="#">Personal Homepage</a>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-envelope"></span>&ensp;deepthysivan10@gmail.com</h5>
+										<br>
+								<img src="images/Dhanya M S.jpg" alt="si1" align="left" class="img-circle ali circle2  " style=" padding-left: 00px; margin-left: 50px; float: left;">
+								<h3 class="custom2"  style=" padding-top: 50px; padding-left: 15px;">Dhanya M S&ensp;<b class="bor"style="font-size: 19px;">&ensp;Associate Professor</b></b></h3>
+								<h5 style="padding-top: 10px; font-size: 14px;">&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-earphone" ></span>&ensp;9744543703&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<a href="#">Personal Homepage</a>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-envelope"></span>&ensp;msdhanya52@gmail.com</h5>
+									<br>
+								<img src="images/K V Reshmi.jpg" alt="si1" align="left" class="img-circle ali circle2  " style=" padding-left: 00px; margin-left: 50px; float: left;">
+								<h3 class="custom2"  style=" padding-top: 50px; padding-left: 15px;">K V Reshmi&ensp;<b class="bor"style="font-size: 19px;">&ensp;Associate Professor</b></b></h3>
+								<h5 style="padding-top: 10px; font-size: 14px;">&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-earphone" ></span>&ensp;9544656395&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<a href="#">Personal Homepage</a>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-envelope"></span>&ensp;reshmi301291@gmail.com</h5>
+									<br>
+								<img src="images/Najma P A.jpg" alt="si1" align="left" class="img-circle ali circle2  " style=" padding-left: 00px; margin-left: 50px; float: left; transform: rotate(270deg)">
+								<h3 class="custom2"  style=" padding-top: 50px; padding-left: 15px;">Najma P A&ensp;<b class="bor"style="font-size: 19px;">&ensp;Associate Professor</b></b></h3>
+								<h5 style="padding-top: 10px; font-size: 14px;">&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-earphone" ></span>&ensp;8592950441&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<a href="#">Personal Homepage</a>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-envelope"></span>&ensp;najmapa6590@gmail.com</h5>
+									<br>
+								<img src="images/Nima P Dharmapal.jpg" alt="si1" align="left" class="img-circle ali circle2  " style=" padding-left: 00px; margin-left: 50px; float: left;">
+								<h3 class="custom2"  style=" padding-top: 50px; padding-left: 15px;">Nima P Dharmapal&ensp;<b class="bor"style="font-size: 19px;">&ensp;Associate Professor</b></b></h3>
+								<h5 style="padding-top: 10px; font-size: 14px;">&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-earphone" ></span>&ensp;9497312633&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<a href="#">Personal Homepage</a>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-envelope"></span>&ensp;nimadharmapal@gmail.com</h5>
+									<br>
+								<!-- <img src="images/shalumon.jpg" alt="si1" align="left" class="img-circle ali circle2  " style=" padding-left: 00px; margin-left: 50px; float: left;">
+								<h3 class="custom2"  style=" padding-top: 50px; padding-left: 15px;">Shalumon P S&ensp;&ensp;&ensp;&ensp;&ensp;<b class="bor"style="font-size: 19px;">&ensp;Foreman</b></b></h3>
+								<h5 style="padding-top: 10px; font-size: 14px;">&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-earphone" ></span>&ensp;9497312633&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<a href="#">Personal Homepage</a>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-envelope"></span>&ensp;nimadharmapal@gmail.com</h5> -->
+									<br>
+								<img src="images/sujith.jpg" alt="si1" align="left" class="img-circle ali circle2  " style=" padding-left: 00px; margin-left: 50px; float: left;">
+								<h3 class="custom2"  style=" padding-top: 50px; padding-left: 15px;">Sujith M S&ensp;&ensp;&ensp;&ensp;&ensp;<b class="bor"style="font-size: 19px;">&ensp; Demonstrator</b></b></h3>
+								<h5 style="padding-top: 10px; font-size: 14px;">&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-earphone" ></span>&ensp;9961870725&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<a href="#">Personal Homepage</a>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-envelope"></span>&ensp;sujithms88@gmail.com</h5>
+								<br>
+								<img src="images/GEETA1.jpg" alt="si1" align="left" class="img-circle ali circle2  " style=" padding-left: 00px; margin-left: 50px; float: left;">
+								<h3 class="custom2"  style=" padding-top: 50px; padding-left: 15px;">Geetha K Nair&ensp;&ensp;&ensp;&ensp;&ensp;<b class="bor"style="font-size: 19px;">&ensp; Demonstrator</b></b></h3>
+								<h5 style="padding-top: 10px; font-size: 14px;">&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-earphone" ></span>&ensp;8891802056&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<a href="#">Personal Homepage</a>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-envelope"></span>&ensp;geetha@mec.ac.in</h5>
+								<br>
+								<img src="images/lekshmivr.jpg" alt="si1" align="left" class="img-circle ali circle2  " style=" padding-left: 00px; margin-left: 50px; float: left;">
+								<h3 class="custom2"  style=" padding-top: 50px; padding-left: 15px;">Lekshmi V R&ensp;&ensp;&ensp;&ensp;&ensp;<b class="bor"style="font-size: 19px;">&ensp; Demonstrator</b></b></h3>
+								<h5 style="padding-top: 10px; font-size: 14px;">&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-earphone" ></span>&ensp;9447566271&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<a href="#">Personal Homepage</a>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-envelope"></span>&ensp;lekshmiathul@gmail.com</h5>
+								<br>
+								<img src="images/shyamkumar.jpg" alt="si1" align="left" class="img-circle ali circle2  " style=" padding-left: 00px; margin-left: 50px; float: left;">
+								<h3 class="custom2"  style=" padding-top: 50px; padding-left: 15px;">Shyamkumar G&ensp;&ensp;&ensp;&ensp;&ensp;<b class="bor"style="font-size: 19px;">&ensp; Trade Instructor Grade II
+
+								</b></b></h3>
+								<h5 style="padding-top: 10px; font-size: 14px;">&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-earphone" ></span>&ensp;9446867527&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<a href="#">Personal Homepage</a>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-envelope"></span>&ensp;syam@mec.ac.in</h5>
+								<br>
+								<img src="images/pradeep.jpg" alt="si1" align="left" class="img-circle ali circle2  " style=" padding-left: 00px; margin-left: 50px; float: left;">
+								<h3 class="custom2"  style=" padding-top: 50px; padding-left: 15px;">Pradeepkumar P R&ensp;&ensp;&ensp;&ensp;&ensp;<b class="bor"style="font-size: 19px;">&ensp;  Tradesman</b></b></h3>
+								<h5 style="padding-top: 10px; font-size: 14px;">&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-earphone" ></span>&ensp;9447191081&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<a href="#">Personal Homepage</a>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-envelope"></span>&ensp;pradeepkumarpr@gmail.com</h5>
+								<br>
+							<!-- 	<img src="images/summayya.jpg" alt="si1" align="left" class="img-circle ali circle2  " style=" padding-left: 00px; margin-left: 50px; float: left;">
+								<h3 class="custom2"  style=" padding-top: 50px; padding-left: 15px;">Sumayya P I&ensp;&ensp;&ensp;&ensp;&ensp;<b class="bor"style="font-size: 19px;">&ensp;  Tradesman</b></b></h3>
+								<h5 style="padding-top: 10px; font-size: 14px;">&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-earphone" ></span>&ensp;9497312633&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<a href="#">Personal Homepage</a>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-envelope"></span>&ensp;nimadharmapal@gmail.com</h5>
+								<br> -->
+								<img src="images/dixon.jpg" alt="si1" align="left" class="img-circle ali circle2  " style=" padding-left: 00px; margin-left: 50px; float: left;">
+								<h3 class="custom2"  style=" padding-top: 50px; padding-left: 15px;">Dixon M A&ensp;&ensp;&ensp;&ensp;&ensp;<b class="bor"style="font-size: 19px;">&ensp;  Tradesman</b></b></h3>
+								<h5 style="padding-top: 10px; font-size: 14px;">&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-earphone" ></span>&ensp;9995555173&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<a href="#">Personal Homepage</a>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="glyphicon glyphicon-envelope"></span>&ensp;madixon79@gmail.com</h5>
+
+
+
+
+
+
+								
+							</div>
+	
+				</div>					
+
+
+
+
+			</div>
+
+		</div>
+	</div>
+	</div>
+	<style type="text/css">
+		
+				.circle1 {
+				 /* display: block;*/
+				 /* padding-left: 100px;*/
+				 /*padding-top: 20px;*/
+				  width: 150px;
+				  height: 150px;
+				  margin: 1em auto;
+				  background-size: cover;
+				  background-repeat: no-repeat;
+				  background-position: center center;*/
+				  -webkit-border-radius: 99em;
+				  -moz-border-radius: 99em;
+				  border-radius: 99em;
+				  border: 5px solid #eee;
+				  box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3); 
+				  margin-top: 30px; 
+				}
+
+				.circle2 {
+				 /* display: block;*/
+				 /* padding-left: 100px;*/
+				 /*padding-top: 20px;*/
+				  width: 110px;
+				  height: 110px;
+				  margin: 1em auto;
+				  background-size: cover;
+				  background-repeat: no-repeat;
+				  background-position: center center;*/
+				  -webkit-border-radius: 99em;
+				  -moz-border-radius: 99em;
+				  border-radius: 99em;
+				  border: 5px solid #eee;
+				  box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3); 
+				  margin-top: 30px; 
+				}
+
+	</style>
+<!-- 	<div id = "w" class="container-fluid " style="background-color: #505050;  ">
+		<p class=" text-center" style="color:white; padding-top: 4px;">&#169; 2018 MEC. All rights reserved<p>
+	    <style type="text/css">
+	    	#w {
+	    		/*position: absolute;*/
+	    		
+	    		padding-top: 8px;
+	    		/*width: 100%*/
+	    		    clear: both;
+				    position: relative;
+				    bottom: 0px;
+				    padding-bottom: 0px;
+				    z-index: 10;
+				    height: 30px;
+				    margin-top: -3em;
+
+	    	}
+	    </style>
+	</div>
+
+ -->
+<div class="container-fluid" style="background-color: #505050; ">
+	<p class=" text-center" style="color:white; padding-top: 7px;">&#169; 2018 MEC. All rights reserved<p>
+	</div>
+	</body>
+</html>
+<script type="text/javascript">
+
+  var calender = document.querySelector(".calender");//container of calender
+  var  topDiv = document.querySelector('.month');
+  var  monthDiv = calender.querySelector("h3");//h3 of monthes
+  var  yearDiv = calender.querySelector('h4');//h4 for years
+  var  weekDiv = calender.querySelector(".weeks");//week container
+  var  dayNames = weekDiv.querySelectorAll("li");//dayes name
+  var  dayItems = calender.querySelector(".days");//date of day container
+  var  prev = calender.querySelector(".prev");
+  var  next = calender.querySelector(".next");
+
+    // date variables
+  var  years = new Date().getFullYear();
+  var  monthes = new Date(new Date().setFullYear(years)).getMonth();
+  var  lastDayOfMonth = new Date(new Date(new Date().setMonth(monthes + 1)).setDate(0)).getDate();
+  var  dayOfFirstDateOfMonth = new Date(new Date(new Date().setMonth(monthes)).setDate(1)).getDay();
+
+    // array to define name of monthes
+  var  monthNames = ["January", "February", "March", "April", "May", "June",
+                  "July", "August", "September", "October", "November", "December"];
+   
+  var i;//counter for day before month first day in week
+  var x;//counter for prev , next
+  var counter;//counter for day of month  days;
+
+
+  //display dayes of month in items
+  	function days(x) {
+		  'use strict';
+		  dayItems.innerHTML = "";
+		  monthes = monthes + x;
+		  var currentDate=new Date();
+
+		  /////////////////////////////////////////////////
+		  //test for last month useful while prev ,max prevent go over array
+		  if (monthes > 11) {
+		    years = years + 1;
+		    monthes = new Date(new Date(new Date().setFullYear(years)).setMonth(0)).getMonth();
+		  }
+		  if (monthes < 0) {
+		    years = years - 1;
+		    monthes = new Date(new Date(new Date().setFullYear(years)).setMonth(11)).getMonth();
+		  }
+		  
+		  lastDayOfMonth = new Date(new Date(new Date(new Date().setFullYear(years)).setMonth(monthes + 1)).setDate(0)).getDate();
+		  dayOfFirstDateOfMonth = new Date(new Date(new Date(new Date().setFullYear(years)).setMonth(monthes)).setDate(1)).getDay();
+		  
+		  yearDiv.innerHTML = years;
+		  monthDiv.innerHTML = monthNames[monthes];
+		  for (i = 0; i < dayOfFirstDateOfMonth; i = i + 1) {
+		    if (dayOfFirstDateOfMonth === 7) { break; }
+		    dayItems.innerHTML += "<li></li>";
+		  }
+		  for (counter = 1; counter <= lastDayOfMonth; counter = counter + 1) {
+
+		    dayItems.innerHTML += "<li>" + (counter) + "</li>";
+		    if(currentDate.getFullYear()==years){
+		    	if(currentDate.getMonth()==monthes){
+		    		if(currentDate.getDate()==counter){
+		    			dayItems.childNodes[i+counter-1].style.color = "#006699";
+		    			dayItems.childNodes[i+counter-1].style.backgroundColor = "white";
+		    		}
+		    	}
+		    }
+
+		  }
+ 
+	}
+	prev.onclick = function () {
+	  'use strict';
+	  days(-1);//decrement monthes
+	};
+	next.onclick = function () {
+	  'use strict';
+	  days(1);//increment monthes
+	};
+	days(0);
+
+	//end
+</script>
